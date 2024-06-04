@@ -28,7 +28,7 @@ export default async function Todo() {
       </div>
       <div className="flex gap-2">
        <DeleteBtn id={t._id}/>
-       <Link href={`/editTodo/${t._id}`}>
+       <Link href={`/editTodo/${t._id}`} >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

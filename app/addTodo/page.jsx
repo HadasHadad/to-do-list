@@ -24,7 +24,11 @@ export default function AddTodo() {
         body: JSON.stringify({title, description}),
       })
       if (res.ok){
+        
+        
         router.push('/');
+        router.refresh;
+        
       } else{
         throw new Error("failed to create todo item")
       }
