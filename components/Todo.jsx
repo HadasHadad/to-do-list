@@ -1,16 +1,34 @@
 import Link from "next/link";
 import DeleteBtn from "./DeleteBtn";
 
-export default function Todo() {
+const getTodos = async() => {
+  try{
+   const res =  await fetch ('http:localhost:3000/api/todos' , {cache: 'no-store'});
+    if(!res.ok){
+      throw new Error("failed to fetch data")
+    }
+    return res.json();
+  }
+  catch(error){
+    console.log("error fetching todos", error);
+  }
+}
+
+export default async function Todo() {
+
+    const {todos} = await getTodos();
+
   return (
+    <>
+    {todos.map((t) => (
     <div className="flex border border-slate-800 my-3 justify-between p-4">
       <div>
-        <h1 className="text-xl font-bold">title</h1>
-        <p>description</p>
+        <h1 className="text-xl font-bold">{t.title}</h1>
+        <p>{t.description}</p>
       </div>
       <div className="flex gap-2">
        <DeleteBtn/>
-       <Link href='/editTodo/123'>
+       <Link href={`/editTodo/${t._id}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -28,5 +46,7 @@ export default function Todo() {
         </Link>
       </div>
     </div>
+    ))}
+    </>
   );
 }
