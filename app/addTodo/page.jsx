@@ -25,10 +25,10 @@ export default function AddTodo() {
       })
       if (res.ok){
         
-        
+       
         router.push('/');
-        router.refresh;
-        
+        router.refresh();
+
       } else{
         throw new Error("failed to create todo item")
       }

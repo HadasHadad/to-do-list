@@ -22,7 +22,8 @@ export default function EditTodoForm({ id, title, description }) {
       }
       
       router.push('/')
-      router.refresh;
+      router.refresh();
+      
     } catch (error) {
       console.log(error)
     }
