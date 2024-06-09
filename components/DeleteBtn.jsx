@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 
-export default function DeleteBtn({ id }) {
-  const router = useRouter();
+export default function DeleteBtn({ id, onDelete }) {
+ 
 
   const removeTodo = async () => {
     const confirmed = confirm("Are you sure?");
@@ -13,7 +13,8 @@ export default function DeleteBtn({ id }) {
         method: "DELETE",
       });
       if (res.ok){
-        router.refresh();
+       
+        onDelete(id);
       }
       
     }
