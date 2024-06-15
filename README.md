@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# To-Do List Web App
+
+A powerful and intuitive to-do list application built with Next.js and MongoDB. Manage your tasks efficiently with a simple and user-friendly interface.
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Features](#features)
+5. [Technologies Used](#technologies-used)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Acknowledgements](#acknowledgements)
+
+## Project Overview
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The application allows users to add, complete, and delete tasks, providing a seamless experience to manage daily activities.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ensure you have the following installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js
+- npm (or yarn, pnpm, bun)
+- MongoDB
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
 
-## Learn More
+    \`\`\`sh
+    git clone https://github.com/yourusername/todo-list-app.git
+    \`\`\`
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    \`\`\`sh
+    cd todo-list-app
+    \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Install the dependencies:
 
-## Deploy on Vercel
+    \`\`\`sh
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    # or
+    bun install
+    \`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Set up your environment variables. Create a \`.env.local\` file in the root of your project and add your MongoDB URI:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    \`\`\`sh
+    MONGODB_URI=your_mongodb_uri
+    \`\`\`
+
+5. Run the development server:
+
+    \`\`\`sh
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    \`\`\`
+
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+- **Add a Task:** Use the input field and press 'Enter' or click 'Add' to add a new task.
+- **Complete a Task:** Click the checkbox next to the task to mark it as complete.
+- **Delete a Task:** Click the 'Delete' button next to the task to remove it from the list.
+
+![Screenshot](path/to/screenshot.png)
+
+## Features
+
+- **Task Management:** Add, complete, and delete tasks.
+- **Responsive Design:** Optimized for various devices and screen sizes.
+- **Real-time Updates:** The page auto-updates as you modify tasks.
+- **Database Integration:** Tasks are stored in MongoDB for persistence.
+
+## Technologies Used
+
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Database:** [MongoDB](https://www.mongodb.com/)
+- **Styling:** CSS Modules / Tailwind CSS (specify what you used)
+- **Fonts:** [next/font](https://nextjs.org/docs/basic-features/font-optimization) for Google Fonts
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+
+    \`\`\`sh
+    git checkout -b feature/your-feature-name
+    \`\`\`
+
+3. Commit your changes:
+
+    \`\`\`sh
+    git commit -m 'Add some feature'
+    \`\`\`
+
+4. Push to the branch:
+
+    \`\`\`sh
+    git push origin feature/your-feature-name
+    \`\`\`
+
+5. Open a pull request.
+
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Tailwind CSS](https://tailwindcss.com/) / [CSS Modules](https://github.com/css-modules/css-modules) (specify what you used)
+- [Vercel](https://vercel.com/)
